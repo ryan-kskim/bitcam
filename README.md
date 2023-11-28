@@ -3,7 +3,7 @@
 ```
 ...
   "private": true,
-  __"proxy": "http://192.168.0.46:8080",__
+  "proxy": "http://xxx.xxx.xxx.xxx:8080",
   "dependencies": {
 ...
 ```
