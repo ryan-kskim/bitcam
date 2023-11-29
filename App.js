@@ -44,6 +44,27 @@ const App = () => {
   return (
     <div className="container">
 
+...
+                  <DatePicker
+                    value={modalCU ? moment(empData.hireDate) : hireDate}
+                    calendar={<Calendar format="YYYY-MM-DD" />}                      
+                    onChange={(date) => setHireDate(date)}
+                  >
+                    {
+                      ({value}) => {
+                        return (                                
+                          <Input required
+                            id="hireDate"                              
+                            value={value ? moment(value).format('YYYY-MM-DD HH:mm:ss.000') : ''}
+                            placeholder="입사일자를 입력해 주세요."
+                            icon="calendar alternate outline"
+                            style={{width: "250px"}}
+                          />
+                        )
+                      }
+                    }
+                  </DatePicker>
+...    
     </div>
   );
 }
